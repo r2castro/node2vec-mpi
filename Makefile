@@ -22,7 +22,7 @@ DEPS := $(OBJS:.o=.d)
 # Add a prefix to INC_DIRS. So moduleA would become -ImoduleA. GCC understands this -I flag
 
 # These files will have .d instead of .o as the output.
-CPPFLAGS := -I$(INC_DIR) -g
+CPPFLAGS := -I$(INC_DIR) -g -Wall -Werror
 
 # The final build step.
 $(TARGET): $(OBJS)
@@ -38,6 +38,6 @@ run: $(TARGET)
 
 .PHONY: clean
 clean:
-	rm -r $(OBJS) $(TARGET)
+	rm -rf $(OBJS) $(TARGET)
 
 -include $(DEPS)
