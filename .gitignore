@@ -39,3 +39,9 @@
 
 # debug information files
 *.dwo
+
+# Build directories
+bin/
+!bin/.gitkeep
+obj/
+!obj/.gitkeep
